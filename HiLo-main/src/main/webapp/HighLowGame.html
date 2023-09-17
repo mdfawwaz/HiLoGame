@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Random Number Display</title>
+</head>
+<body>
+    <h1>Random Number Display</h1>
+    <p>Random Number: <span id="randomNumber">Generating...</span></p>
+    <button id="higherBtn">Higher</button>
+    <button id="lowerBtn">Lower</button>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const randomNumberElement = document.getElementById("randomNumber");
+
+            function getRandomNumber(min, max) {
+                return Math.floor(Math.random() * (max - min + 1)) + min;
+            }
+            let currentNumber = getRandomNumber(1, 100);
+            randomNumberElement.textContent = currentNumber;
+        });
+    </script>
+</body>
+</html>
